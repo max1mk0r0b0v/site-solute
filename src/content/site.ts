@@ -29,6 +29,7 @@ export type CaseStudy = {
   projectType: string;
   industry: string;
   liveUrl: string;
+  previewImage: string;
   summary: string;
   outcome: string;
   services: string[];
@@ -237,6 +238,7 @@ export const caseStudies: CaseStudy[] = [
     projectType: "דף נחיתה פרימיום",
     industry: "יופי וקוסמטיקה",
     liveUrl: "https://beauty-by-maya-rouge.vercel.app/",
+    previewImage: "/images/portfolio/beauty-by-maya-preview.png",
     summary:
       "דף נחיתה אלגנטי וממוקד המרות לקליניקת טיפולי פנים, עם עיצוב נשי, רקע קבוע של הקליניקה שנשאר גם בגלילה, אנימציות עדינות, טופס וואטסאפ וחוויית מובייל מוקפדת.",
     outcome:
@@ -267,6 +269,7 @@ export const caseStudies: CaseStudy[] = [
     projectType: "אתר תדמית פרימיום",
     industry: "משפטים / נדל״ן",
     liveUrl: "https://lawyer-yonatan-rozen.vercel.app/",
+    previewImage: "/images/portfolio/lawyer-yonatan-rozen-preview.png",
     summary:
       "אתר תדמית יוקרתי לעורך דין מקרקעין, עם פורטרייט מקצועי, רקע קבוע בגלילה עם אנימציות מינימליות, שפה סמכותית, תחושת אמון גבוהה והתאמה מלאה למובייל.",
     outcome:
@@ -297,6 +300,7 @@ export const caseStudies: CaseStudy[] = [
     projectType: "אתר עסקי מלא",
     industry: "טיפולים / עסק מקומי",
     liveUrl: "https://original-thai-massage.vercel.app/",
+    previewImage: "/images/portfolio/original-thai-massage-preview.png",
     summary:
       "אתר עסקי מלא לעסק מקומי בירושלים, כולל שירותים, מחירון, גלריה, ביקורות, שעות פעילות, יצירת קשר ורקע ויזואלי שמלווה את הגלילה.",
     outcome:
@@ -317,7 +321,6 @@ export const caseStudies: CaseStudy[] = [
       "הצגת שירותים ומחירון בצורה ברורה",
       "גלריה וביקורות שמחזקות אמון",
       "שעות פעילות ופרטי קשר נגישים",
-      "טופס יצירת קשר ששולח למייל האלקטרוני",
       "רקע ויזואלי שמלווה את הגלילה",
     ],
     highlights: [

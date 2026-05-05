@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { ButtonLink } from "@/components/ui/button-link";
+import { HeroPreviewCarousel } from "@/components/ui/hero-preview-carousel";
 import { SectionHeading } from "@/components/ui/section-heading";
 import {
   caseStudies,
@@ -84,22 +86,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="relative grid gap-6 p-6">
-                <div className="relative overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/7 p-5 shadow-[0_20px_50px_rgba(2,6,23,0.34)] backdrop-blur-md">
-                  <div className="absolute inset-0 bg-[url('/images/sitesolute-background.png')] bg-cover bg-center opacity-55" />
-                  <div className="absolute inset-0 bg-slate-950/34" />
-                  <div className="relative grid gap-4">
-                    <div className="h-3 w-28 rounded-full bg-white/30" />
-                    <div className="grid gap-3 rounded-[1.25rem] border border-white/12 bg-white/10 p-4">
-                      <div className="h-4 w-3/4 rounded-full bg-white/70" />
-                      <div className="h-3 w-2/3 rounded-full bg-sky-200/70" />
-                      <div className="mt-3 grid grid-cols-3 gap-3">
-                        <div className="h-20 rounded-2xl bg-white/16" />
-                        <div className="h-20 rounded-2xl bg-sky-300/20" />
-                        <div className="h-20 rounded-2xl bg-violet-300/20" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <HeroPreviewCarousel />
                 <div className="grid gap-4">
                   {[trustPoints.slice(0, 2), trustPoints.slice(2, 4)].map(
                     (row) => (
@@ -313,6 +300,15 @@ export default function Home() {
               key={study.name}
               className="surface-panel motion-lift glass-border group rounded-[1.9rem] p-8"
             >
+              <div className="relative -mx-3 -mt-3 mb-6 aspect-[16/9] overflow-hidden rounded-[1.45rem] border border-white/80 bg-slate-100 shadow-[0_18px_42px_rgba(49,46,129,0.12)]">
+                <Image
+                  src={study.previewImage}
+                  alt={`${study.name} preview`}
+                  fill
+                  sizes="(min-width: 1024px) 320px, 100vw"
+                  className="object-cover object-top"
+                />
+              </div>
               <p className="badge-soft text-xs font-semibold tracking-[0.18em] text-sky-800">
                 {study.industry}
               </p>

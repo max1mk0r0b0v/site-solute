@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { PageHero } from "@/components/ui/page-hero";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { caseStudies } from "@/content/site";
@@ -67,6 +69,15 @@ export default function PortfolioPage() {
                 </a>
               </div>
               <div>
+                <div className="relative mb-8 aspect-[16/9] overflow-hidden rounded-[1.7rem] border border-white/80 bg-slate-100 shadow-[0_24px_60px_rgba(49,46,129,0.14)]">
+                  <Image
+                    src={study.previewImage}
+                    alt={`${study.name} preview`}
+                    fill
+                    sizes="(min-width: 1024px) 640px, 100vw"
+                    className="object-cover object-top"
+                  />
+                </div>
                 <p className="text-base leading-8 text-slate-600">
                   {study.summary}
                 </p>
