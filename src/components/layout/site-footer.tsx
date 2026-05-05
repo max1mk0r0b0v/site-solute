@@ -61,11 +61,20 @@ export function SiteFooter() {
               {siteConfig.email}
             </a>
             <a
-              href={`tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`}
+              href={siteConfig.phoneHref}
               dir="ltr"
               className="block transition-colors hover:text-white"
             >
               {siteConfig.phone}
+            </a>
+            <a
+              href={siteConfig.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              dir="ltr"
+              className="block transition-colors hover:text-white"
+            >
+              WhatsApp {siteConfig.phone}
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-4">

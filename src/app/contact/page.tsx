@@ -16,16 +16,14 @@ export const metadata = createMetadata({
 });
 
 export default function ContactPage() {
-  const phoneHref = `tel:${siteConfig.phone.replace(/[^+\d]/g, "")}`;
-
   return (
     <div>
       <PageHero
         eyebrow="יצירת קשר"
         title="רוצים אתר חדש שנראה פרימיום ועולה לאוויר מהר?"
         description="אפשר לפנות כדי לדבר על דף נחיתה / אתר תדמית ב־₪995 או אתר עסקי מלא ב־₪1,595, עם כל מה שצריך כדי להתחיל נכון."
-        primaryCta={{ label: "שלחו מייל", href: `mailto:${siteConfig.email}` }}
-        secondaryCta={{ label: "התקשרו עכשיו", href: phoneHref }}
+        primaryCta={{ label: "שלחו וואטסאפ", href: siteConfig.whatsappHref }}
+        secondaryCta={{ label: "התקשרו עכשיו", href: siteConfig.phoneHref }}
       />
 
       <section className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-20 sm:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:px-10">
@@ -54,7 +52,21 @@ export default function ContactPage() {
                 טלפון
               </p>
               <a
-                href={phoneHref}
+                href={siteConfig.phoneHref}
+                dir="ltr"
+                className="mt-2 block text-lg text-sky-300 transition-colors hover:text-sky-200"
+              >
+                {siteConfig.phone}
+              </a>
+            </div>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white">
+                וואטסאפ
+              </p>
+              <a
+                href={siteConfig.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 dir="ltr"
                 className="mt-2 block text-lg text-sky-300 transition-colors hover:text-sky-200"
               >

@@ -100,21 +100,29 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {trustPoints.map((point) => (
-                    <div
-                      key={point}
-                      className="motion-lift rounded-[1.4rem] border border-white/10 bg-white/7 p-5 backdrop-blur-md"
-                    >
-                      <p className="text-sm font-semibold text-white">{point}</p>
-                    </div>
-                  ))}
+                <div className="grid gap-4">
+                  {[trustPoints.slice(0, 2), trustPoints.slice(2, 4)].map(
+                    (row) => (
+                      <div key={row.join("-")} className="grid grid-cols-2 gap-4">
+                        {row.map((point) => (
+                          <div
+                            key={point}
+                            className="motion-lift rounded-[1.4rem] border border-white/10 bg-white/7 p-5 backdrop-blur-md"
+                          >
+                            <p className="text-sm font-semibold text-white">
+                              {point}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    ),
+                  )}
                 </div>
-                <div className="grid gap-4 sm:grid-cols-3">
+                <div className="grid grid-cols-3 gap-4">
                   {["RTL מלא", "טעינה מהירה", "עיצוב חי"].map((item) => (
                     <div
                       key={item}
-                      className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-center text-sm text-slate-200"
+                      className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-200"
                     >
                       {item}
                     </div>
@@ -308,6 +316,9 @@ export default function Home() {
               <p className="badge-soft text-xs font-semibold tracking-[0.18em] text-sky-800">
                 {study.industry}
               </p>
+              <p className="mt-3 text-sm font-semibold text-slate-500">
+                {study.projectType}
+              </p>
               <h3 className="mt-5 text-2xl font-semibold tracking-tight text-slate-950">
                 {study.name}
               </h3>
@@ -317,6 +328,14 @@ export default function Home() {
               <p className="mt-5 rounded-2xl bg-gradient-to-br from-sky-50 to-white px-4 py-4 text-sm text-slate-700 shadow-[inset_0_1px_0_rgba(255,255,255,0.85)]">
                 {study.outcome}
               </p>
+              <a
+                href={study.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex rounded-full border border-white/70 bg-white/76 px-5 py-3 text-sm font-semibold text-slate-950 shadow-[0_16px_34px_rgba(49,46,129,0.08)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white/92"
+              >
+                צפייה באתר
+              </a>
             </article>
           ))}
         </div>

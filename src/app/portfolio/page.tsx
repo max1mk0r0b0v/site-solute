@@ -24,8 +24,8 @@ export default function PortfolioPage() {
       <section className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 lg:px-10">
         <SectionHeading
           eyebrow="פרויקטים נבחרים"
-          title="אפשר להחליף את הדוגמאות האלה בעבודות אמיתיות בכל שלב"
-          description="כל פרויקט ממוסגר סביב איכות העיצוב, מהירות האתר, התאמה למובייל והדרך שבה העסק מוצג כמקצועי יותר."
+          title="שלושה אתרים אמיתיים שעלו לאוויר"
+          description="כל פרויקט מציג עסק אחר, היקף אחר ומטרה עסקית אחרת, עם דגש על נראות פרימיום, מובייל חזק ודרך ברורה ליצירת קשר."
         />
         <div className="mt-12 grid gap-6">
           {caseStudies.map((study, index) => (
@@ -43,6 +43,9 @@ export default function PortfolioPage() {
                 <p className="relative mt-3 text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">
                   {study.industry}
                 </p>
+                <p className="relative mt-2 text-sm font-medium text-slate-300">
+                  {study.projectType}
+                </p>
                 <h2 className="relative mt-4 text-3xl font-semibold tracking-tight">
                   {study.name}
                 </h2>
@@ -54,6 +57,14 @@ export default function PortfolioPage() {
                 <p className="relative mt-6 text-base leading-8 text-slate-300">
                   {study.outcome}
                 </p>
+                <a
+                  href={study.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative mt-6 inline-flex rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 shadow-[0_18px_38px_rgba(15,23,42,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-sky-50"
+                >
+                  צפייה באתר
+                </a>
               </div>
               <div>
                 <p className="text-base leading-8 text-slate-600">
@@ -137,15 +148,15 @@ export default function PortfolioPage() {
       <section className="border-t border-white/50 bg-white/36 backdrop-blur-sm">
         <div className="mx-auto w-full max-w-6xl px-6 py-20 sm:px-8 lg:px-10">
           <SectionHeading
-            eyebrow="הנחיות לתוכן"
-            title="עקרונות פשוטים להצגת כל פרויקט"
-            description="כדאי לשמור כל תיאור פרויקט ממוקד בהיקף האתר, באיכות הביצוע, בתחושת הפרימיום ובתוצאה העסקית."
+            eyebrow="מה רואים בעבודות"
+            title="כל אתר נבנה סביב מטרה עסקית ברורה"
+            description="הדוגמאות מציגות איך אפשר לקחת עסק מקומי, קליניקה או משרד מקצועי ולתרגם אותם לאתר שמרגיש אמין, ברור ומוכן לפניות."
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
             {[
-              "ציינו אם מדובר בדף נחיתה / אתר תדמית או באתר עסקי מלא.",
-              "הסבירו מה השתפר בעיצוב, במהירות ובמובייל.",
-              "הדגישו איך האתר החדש חיזק את האמינות והנראות של העסק.",
+              "דף נחיתה פרימיום שמבליט שירות אחד ומוביל לפנייה מהירה.",
+              "אתר תדמית סמכותי למקצועות אמון עם שפה נקייה ורצינית.",
+              "אתר עסקי מלא עם שירותים, מחירון, גלריה, ביקורות ויצירת קשר.",
             ].map((note) => (
               <div
                 key={note}
