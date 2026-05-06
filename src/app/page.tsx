@@ -12,7 +12,6 @@ import {
   processSteps,
   services,
   sharedTrackBenefits,
-  siteConfig,
   technicalValueItems,
   trustPoints,
 } from "@/content/site";
@@ -26,12 +25,9 @@ export default function Home() {
           <div className="ambient-drift absolute left-[6%] top-[18%] h-64 w-64 rounded-full bg-violet-300/18 blur-3xl" />
           <div className="absolute bottom-0 right-[22%] h-48 w-48 rounded-full bg-amber-200/18 blur-3xl" />
         </div>
-        <div className="mx-auto grid w-full max-w-6xl gap-14 px-6 py-18 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-28">
-          <div className="reveal relative max-w-2xl">
-            <p className="badge-soft text-xs font-semibold tracking-[0.24em] text-sky-800">
-              {siteConfig.name}
-            </p>
-            <h1 className="mt-7 text-5xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-[4.35rem]">
+        <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-12 sm:px-8 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-14 lg:gap-y-0 lg:px-10 lg:py-28">
+          <div className="reveal relative order-1 max-w-2xl lg:col-start-1 lg:row-start-1">
+            <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-[4.35rem]">
               אתרים לעסקים שרוצים להיראות כמו מותג גדול.
             </h1>
             <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
@@ -39,39 +35,12 @@ export default function Home() {
               עיצוב פרימיום, תמחור חד וברור, קוד מלא וניתן להעברה ועלייה מהירה
               לאוויר.
             </p>
-            <div className="surface-panel glass-border mt-9 rounded-[1.75rem] p-4 sm:p-5">
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href="/contact">בואו נתחיל</ButtonLink>
-                <ButtonLink href="/portfolio" variant="secondary">
-                  לצפייה בעבודות
-                </ButtonLink>
-              </div>
-              <p className="mt-4 text-sm leading-7 text-slate-500">
-                תשלום חד פעמי בלבד, בלי התחייבות חודשית, עם תת דומיין כלול
-                ואפשרות לדומיין אישי בתוספת תשלום.
-              </p>
-            </div>
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {heroStats.map((item) => (
-                <div
-                  key={item.label}
-                  className="surface-panel motion-lift glass-border rounded-[1.5rem] p-5"
-                >
-                  <p className="text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
-                    {item.value}
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="reveal reveal-delay-1 relative">
+          <div className="reveal reveal-delay-1 relative order-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
             <div className="absolute inset-x-8 top-10 -z-10 h-80 rounded-full bg-sky-200/34 blur-3xl" />
             <div className="surface-panel-dark premium-sheen relative overflow-hidden rounded-[2.25rem]">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.22),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.18),transparent_28%)]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.18),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(168,85,247,0.14),transparent_28%)]" />
               <div className="relative flex items-center justify-between border-b border-white/10 px-6 py-5">
                 <div>
                   <p className="text-sm font-semibold text-white">
@@ -85,16 +54,19 @@ export default function Home() {
                   Premium web agency
                 </span>
               </div>
-              <div className="relative grid gap-6 p-6">
+              <div className="relative grid gap-5 p-5 sm:gap-6 sm:p-6">
                 <HeroPreviewCarousel />
-                <div className="grid gap-4">
+                <div className="grid gap-3 sm:gap-4">
                   {[trustPoints.slice(0, 2), trustPoints.slice(2, 4)].map(
                     (row) => (
-                      <div key={row.join("-")} className="grid grid-cols-2 gap-4">
+                      <div
+                        key={row.join("-")}
+                        className="grid grid-cols-2 gap-3 sm:gap-4"
+                      >
                         {row.map((point) => (
                           <div
                             key={point}
-                            className="motion-lift rounded-[1.4rem] border border-white/10 bg-white/7 p-5 backdrop-blur-md"
+                            className="motion-lift rounded-[1.4rem] border border-white/12 bg-white/8 p-4 backdrop-blur-md sm:p-5"
                           >
                             <p className="text-sm font-semibold text-white">
                               {point}
@@ -105,17 +77,47 @@ export default function Home() {
                     ),
                   )}
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-3 sm:gap-4">
                   {["RTL מלא", "טעינה מהירה", "עיצוב חי"].map((item) => (
                     <div
                       key={item}
-                      className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-200"
+                      className="rounded-2xl border border-white/12 bg-black/18 px-3 py-3 text-sm text-slate-200 sm:px-4"
                     >
                       {item}
                     </div>
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="reveal relative order-3 max-w-2xl lg:col-start-1 lg:row-start-2">
+            <div className="surface-panel glass-border rounded-[1.75rem] p-4 sm:p-5 lg:mt-9">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <ButtonLink href="/contact">בואו נתחיל</ButtonLink>
+                <ButtonLink href="/portfolio" variant="secondary">
+                  לצפייה בעבודות
+                </ButtonLink>
+              </div>
+              <p className="mt-4 text-sm leading-7 text-slate-500">
+                תשלום חד פעמי בלבד, בלי התחייבות חודשית, עם תת דומיין כלול
+                ואפשרות לדומיין אישי בתוספת תשלום.
+              </p>
+            </div>
+            <div className="mt-6 grid gap-4 sm:grid-cols-3 lg:mt-10">
+              {heroStats.map((item) => (
+                <div
+                  key={item.label}
+                  className="surface-panel motion-lift glass-border rounded-[1.5rem] p-5"
+                >
+                  <p className="text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
+                    {item.value}
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
