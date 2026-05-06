@@ -41,11 +41,11 @@ export function HeroPreviewCarousel() {
 
   return (
     <div
-      className="relative overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/7 p-5 shadow-[0_20px_50px_rgba(2,6,23,0.34)] backdrop-blur-md"
+      className="relative mx-auto w-full overflow-hidden rounded-[1.7rem] border border-white/10 bg-white/7 p-5 shadow-[0_20px_50px_rgba(2,6,23,0.34)] backdrop-blur-md"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      <div className="relative aspect-[16/9] min-h-[10rem] overflow-hidden rounded-[1.25rem]">
+      <div className="relative mx-auto aspect-[16/9] min-h-[10rem] w-full overflow-hidden rounded-[1.25rem]">
         {slides.map((slide, index) => (
           <div
             key={slide.src}

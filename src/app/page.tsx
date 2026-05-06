@@ -25,12 +25,12 @@ export default function Home() {
           <div className="ambient-drift absolute left-[6%] top-[18%] h-64 w-64 rounded-full bg-violet-300/18 blur-3xl" />
           <div className="absolute bottom-0 right-[22%] h-48 w-48 rounded-full bg-amber-200/18 blur-3xl" />
         </div>
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-12 sm:px-8 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-14 lg:gap-y-0 lg:px-10 lg:py-28">
+        <div className="mx-auto grid w-full max-w-6xl gap-5 px-6 py-10 sm:px-8 sm:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-x-14 lg:gap-y-0 lg:px-10 lg:py-28">
           <div className="reveal relative order-1 max-w-2xl lg:col-start-1 lg:row-start-1">
             <h1 className="text-5xl font-semibold leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-[4.35rem]">
               אתרים לעסקים שרוצים להיראות כמו מותג גדול.
             </h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-600 sm:text-xl">
+            <p className="mt-7 hidden max-w-xl text-lg leading-8 text-slate-600 sm:text-xl lg:block">
               Sitesolute בונה דפי נחיתה / אתרי תדמית ואתרים עסקיים מלאים עם
               עיצוב פרימיום, תמחור חד וברור, קוד מלא וניתן להעברה ועלייה מהירה
               לאוויר.
@@ -92,7 +92,12 @@ export default function Home() {
           </div>
 
           <div className="reveal relative order-3 max-w-2xl lg:col-start-1 lg:row-start-2">
-            <div className="surface-panel glass-border rounded-[1.75rem] p-4 sm:p-5 lg:mt-9">
+            <p className="text-lg leading-8 text-slate-600 sm:text-xl lg:hidden">
+              Sitesolute בונה דפי נחיתה / אתרי תדמית ואתרים עסקיים מלאים עם
+              עיצוב פרימיום, תמחור חד וברור, קוד מלא וניתן להעברה ועלייה מהירה
+              לאוויר.
+            </p>
+            <div className="surface-panel glass-border mt-5 rounded-[1.75rem] p-4 sm:p-5 lg:mt-9">
               <div className="flex flex-col gap-3 sm:flex-row">
                 <ButtonLink href="/contact">בואו נתחיל</ButtonLink>
                 <ButtonLink href="/portfolio" variant="secondary">
