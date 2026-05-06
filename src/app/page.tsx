@@ -66,9 +66,9 @@ export default function Home() {
                         {row.map((point) => (
                           <div
                             key={point}
-                            className="motion-lift rounded-[1.4rem] border border-white/12 bg-white/8 p-4 backdrop-blur-md sm:p-5"
+                            className="motion-lift rounded-[1.4rem] border border-white/12 bg-white/8 px-3 py-4 backdrop-blur-md sm:p-5"
                           >
-                            <p className="text-sm font-semibold text-white">
+                            <p className="whitespace-nowrap text-[0.8rem] font-semibold text-white sm:text-sm">
                               {point}
                             </p>
                           </div>
