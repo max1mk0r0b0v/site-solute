@@ -27,12 +27,12 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        <nav className="surface-panel glass-border flex gap-1 overflow-x-auto rounded-full p-1.5 pb-1 lg:justify-center lg:pb-1.5">
+        <nav className="surface-panel glass-border flex w-full flex-nowrap gap-1 overflow-x-auto overscroll-x-contain rounded-full p-1.5 pb-1 [scrollbar-width:none] lg:w-auto lg:justify-center lg:pb-1.5 [&::-webkit-scrollbar]:hidden">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-2.5 text-sm font-medium text-slate-600 transition-all duration-300 hover:bg-white/86 hover:text-slate-950 hover:shadow-[0_12px_28px_rgba(49,46,129,0.1)]"
+              className="shrink-0 whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-medium text-slate-600 transition-all duration-300 hover:bg-white/86 hover:text-slate-950 hover:shadow-[0_12px_28px_rgba(49,46,129,0.1)]"
             >
               {item.label}
             </Link>
