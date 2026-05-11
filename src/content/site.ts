@@ -57,7 +57,7 @@ export const siteConfig = {
   description:
     "דפי נחיתה / אתרי תדמית ואתרים עסקיים מלאים לעסקים בישראל עם עיצוב פרימיום, ביצועים מהירים, התאמה מלאה למובייל ועלייה מהירה לאוויר.",
   url: "https://www.sitesolute.co.il",
-  email: "hello@sitesolute.co.il",
+  email: "maximkorbov@gmail.com",
   phone: "055-680-0707",
   phoneHref: "tel:0556800707",
   whatsappNumber: "972556800707",
@@ -368,7 +368,7 @@ export const faqs: FaqItem[] = [
 
 export const contactHighlights = [
   "מענה בתוך יום עסקים אחד",
-  "דפי נחיתה / אתרי תדמית ואתרים עסקיים מלאים במחיר ברור",
+  "דפי נחיתה / אתרי תדמית ואתרים עסקיים מלאים במחיר משתלם וברור",
   "תת דומיין, קוד מלא ועלייה מהירה לאוויר",
 ];
 

@@ -71,10 +71,9 @@ export function SiteFooter() {
               href={siteConfig.whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              dir="ltr"
               className="block transition-colors hover:text-white"
             >
-              WhatsApp {siteConfig.phone}
+              שלחו וואטסאפ
             </a>
           </div>
           <div className="mt-6 flex flex-wrap gap-4">
