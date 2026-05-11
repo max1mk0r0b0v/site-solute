@@ -115,16 +115,16 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="surface-panel glass-border rounded-[2rem] p-8">
+          <div className="surface-panel glass-border rounded-[2rem] p-6 sm:p-8">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
               נושאים שכדאי לדבר עליהם
             </h2>
-            <div className="mt-6 flex flex-wrap gap-3">
+            <div className="mt-6 grid grid-cols-2 gap-3">
               {[...services.map((service) => service.title), ...trustPoints].map(
                 (item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-white/70 bg-white/72 px-4 py-2 text-sm text-slate-700 backdrop-blur-xl"
+                    className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/70 bg-white/72 px-2.5 py-2 text-center text-[0.72rem] font-medium leading-5 text-slate-700 backdrop-blur-xl sm:px-4 sm:text-sm"
                   >
                     {item}
                   </span>
