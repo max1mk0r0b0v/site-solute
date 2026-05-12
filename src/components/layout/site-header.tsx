@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { navItems, siteConfig } from "@/content/site";
 
@@ -12,9 +13,11 @@ export function SiteHeader() {
             className="flex items-center rounded-full"
             aria-label={`${siteConfig.name} - דף הבית`}
           >
-            <img
+            <Image
               src="/images/brand/sitesolute-wordmark.png"
               alt={siteConfig.name}
+              width={1024}
+              height={249}
               className="h-12 w-auto max-w-[178px] object-contain sm:h-14 sm:max-w-[218px]"
               dir="ltr"
             />

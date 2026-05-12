@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { footerLinks, navItems, siteConfig } from "@/content/site";
 
@@ -17,9 +18,11 @@ export function SiteFooter() {
             className="inline-flex rounded-[1.5rem]"
             aria-label={`${siteConfig.name} - דף הבית`}
           >
-            <img
+            <Image
               src="/images/brand/sitesolute-wordmark.png"
               alt={siteConfig.name}
+              width={1024}
+              height={249}
               className="h-14 w-auto max-w-[210px] object-contain sm:h-16 sm:max-w-[250px]"
               dir="ltr"
             />
