@@ -56,7 +56,7 @@ export const siteConfig = {
   shortName: "SS",
   description:
     "דפי נחיתה / אתרי תדמית ואתרים עסקיים מלאים לעסקים בישראל עם עיצוב פרימיום, ביצועים מהירים, התאמה מלאה למובייל ועלייה מהירה לאוויר.",
-  url: "https://www.sitesolute.co.il",
+  url: "https://sitesolute.com",
   email: "maximkorbov@gmail.com",
   phone: "055-680-0707",
   phoneHref: "tel:0556800707",
