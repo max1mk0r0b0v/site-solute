@@ -371,9 +371,3 @@ export const contactHighlights = [
   "דפי נחיתה / אתרי תדמית ואתרים עסקיים מלאים במחיר משתלם וברור",
   "תת דומיין, קוד מלא ועלייה מהירה לאוויר",
 ];
-
-export const footerLinks = [
-  { label: "פרטיות", href: "#" },
-  { label: "תנאים", href: "#" },
-  { label: "מיתוג", href: "#" },
-];

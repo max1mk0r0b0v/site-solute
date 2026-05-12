@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { footerLinks, navItems, siteConfig } from "@/content/site";
+import { navItems, siteConfig } from "@/content/site";
 
 export function SiteFooter() {
   return (
@@ -78,17 +78,6 @@ export function SiteFooter() {
             >
               שלחו וואטסאפ
             </a>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-4">
-            {footerLinks.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="text-sm text-slate-500 transition-colors hover:text-white"
-              >
-                {item.label}
-              </Link>
-            ))}
           </div>
         </div>
       </div>
